@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity11">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha=".8"
+        android:scaleType="fitXY"
+        android:src="@drawable/b" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardViewSignUp22"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_margin="16dp"
+        android:elevation="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EAE8E0"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewTitle22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="@font/alegreya_sc_black"
+                android:gravity="center"
+                android:text="ADD DATA"
+                android:textColor="#141C1C"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/TextUsername22"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Name"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/Textemail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/Textlocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:id="@+id/Texthotline"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Hotline"
+                android:inputType="text"
+                android:textColor="@color/black" />
+
+
+            <Button
+                android:id="@+id/buttonadd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#2E2E2C"
+                android:fontFamily="@font/arbutus"
+                android:onClick="process"
+                android:text="ADD"
+                android:textColor="#F4EDED"
+                android:textSize="20sp" />
+
+            <Button
+                android:id="@+id/show10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="#2E2E2C"
+                android:fontFamily="@font/arbutus"
+                android:text="SHOW"
+                android:textColor="#F4EDED"
+                android:textSize="20sp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
