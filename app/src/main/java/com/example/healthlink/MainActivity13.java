@@ -79,31 +79,15 @@ public class MainActivity13 extends AppCompatActivity {
                 boolean found = false;
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     DataHolder dataHolder = snapshot.getValue(DataHolder.class);
-                    if (dataHolder != null && dataHolder.getName().equalsIgnoreCase(name)) {
-                        // Check if other fields match too
-                        if (dataHolder.getLocation().equalsIgnoreCase(location) ||
-                                dataHolder.getEmail().equalsIgnoreCase(email) ||
-                                dataHolder.getHotline().equalsIgnoreCase(hotline)) {
-                            // Update the data
-                            snapshot.getRef().child("email").setValue(email);
-                            snapshot.getRef().child("location").setValue(location);
-                            snapshot.getRef().child("hotline").setValue(hotline);
-                            found = true;
-                            break;
-                        }
-                    }
-                    else if (dataHolder != null && dataHolder.getLocation().equalsIgnoreCase(location)) {
-                        // Check if other fields match too
-                        if (dataHolder.getName().equalsIgnoreCase(name) ||
-                                dataHolder.getEmail().equalsIgnoreCase(email) ||
-                                dataHolder.getHotline().equalsIgnoreCase(hotline)) {
-                            // Update the data
-                            snapshot.getRef().child("email").setValue(email);
-                            snapshot.getRef().child("name").setValue(name);
-                            snapshot.getRef().child("hotline").setValue(hotline);
-                            found = true;
-                            break;
-                        }
+                    // Match by both name AND location to uniquely identify the correct hospital
+                    if (dataHolder != null
+                            && dataHolder.getName().equalsIgnoreCase(name)
+                            && dataHolder.getLocation().equalsIgnoreCase(location)) {
+                        // Update email and hotline for the matched hospital
+                        snapshot.getRef().child("email").setValue(email);
+                        snapshot.getRef().child("hotline").setValue(hotline);
+                        found = true;
+                        break;
                     }
                 }
                 if (found) {
