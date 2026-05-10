@@ -79,44 +79,13 @@ public class MainActivity14 extends AppCompatActivity {
                 boolean found = false;
                 for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
                     DataHolder2 dataHolder2 = snapshot.getValue(DataHolder2.class);
+                    // Match by doctor name only, then update all other fields
                     if (dataHolder2 != null && dataHolder2.getDname().equalsIgnoreCase(dname)) {
-                        // Check if other fields match too
-                        if (dataHolder2.getPlace().equalsIgnoreCase(chamber) ||
-                                dataHolder2.getSpecial().equalsIgnoreCase(special) ||
-                                dataHolder2.getContact().equalsIgnoreCase(contact)) {
-                            // Update the data
-                            snapshot.getRef().child("place").setValue(chamber);
-                            snapshot.getRef().child("special").setValue(special);
-                            snapshot.getRef().child("contact").setValue(contact);
-                            found = true;
-                            break;
-                        }
-                    } else if (dataHolder2 != null && dataHolder2.getDname().equalsIgnoreCase(dname)) {
-                        // Check if other fields match too
-                        if (dataHolder2.getPlace().equalsIgnoreCase(chamber)) {
-                            if (dataHolder2.getSpecial().equalsIgnoreCase(special) ||
-                                    dataHolder2.getContact().equalsIgnoreCase(contact)) {
-                                // Update the data
-                                snapshot.getRef().child("place").setValue(chamber);
-                                snapshot.getRef().child("special").setValue(special);
-                                snapshot.getRef().child("contact").setValue(contact);
-                                found = true;
-                                break;
-                            }
-                        }
-                    } else if (dataHolder2 != null && dataHolder2.getDname().equalsIgnoreCase(dname)) {
-                        // Check if other fields match too
-                        if (dataHolder2.getPlace().equalsIgnoreCase(special)) {
-                            if (dataHolder2.getSpecial().equalsIgnoreCase(chamber) ||
-                                    dataHolder2.getContact().equalsIgnoreCase(contact)) {
-                                // Update the data
-                                snapshot.getRef().child("place").setValue(chamber);
-                                snapshot.getRef().child("special").setValue(special);
-                                snapshot.getRef().child("contact").setValue(contact);
-                                found = true;
-                                break;
-                            }
-                        }
+                        snapshot.getRef().child("place").setValue(chamber);
+                        snapshot.getRef().child("special").setValue(special);
+                        snapshot.getRef().child("contact").setValue(contact);
+                        found = true;
+                        break;
                     }
                 }
                 if (found) {
