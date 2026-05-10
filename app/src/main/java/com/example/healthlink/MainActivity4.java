@@ -71,7 +71,7 @@ public class MainActivity4 extends AppCompatActivity {
                 }
                 else if(password.isEmpty() || password.length()<6)
                 {
-                    reg_pass.setError("Length of the password at least 7!");
+                    reg_pass.setError("Password must be at least 6 characters!");
                     reg_pass.requestFocus() ;
                 }
                 else if(!password.equals(confirmPassword))
