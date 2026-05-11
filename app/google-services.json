@@ -1,13 +1,14 @@
 {
   "project_info": {
-    "project_number": "6018901011",
-    "project_id": "healthlink-138de",
-    "storage_bucket": "healthlink-138de.appspot.com"
+    "project_number": "759179408049",
+    "firebase_url": "https://healthlink-b5e0c-default-rtdb.firebaseio.com",
+    "project_id": "healthlink-b5e0c",
+    "storage_bucket": "healthlink-b5e0c.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:6018901011:android:a16d0eeeb5fdece1de8be6",
+        "mobilesdk_app_id": "1:759179408049:android:3fe0be49e4353e4746e890",
         "android_client_info": {
           "package_name": "com.example.healthlink"
         }
@@ -15,7 +16,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyB_-o39L20-aJE5s5sByyvU0SXXQqbPFQ8"
+          "current_key": "AIzaSyCndfZ5N09KAHXXCE8lRNcjyrQy47fdaBY"
         }
       ],
       "services": {
