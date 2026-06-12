@@ -18,7 +18,7 @@ HealthLink is an Android mobile application that provides quick access to health
 - [Features](#features)
 - [App Screen Flow](#app-screen-flow)
 - [Technologies Used](#technologies-used)
-- [Installation](#installation)
+- [Download](#download)
 - [Usage](#usage)
 - [Known Limitations](#known-limitations)
 - [Guidelines](#guidelines)
@@ -101,66 +101,11 @@ MainActivity (Splash + Animation)
 
 ---
 
-## Installation
+## Download
 
-### Prerequisites
+Go to the link below to download the android apk and get started.
 
-Before running this project, make sure you have the following installed and configured:
-
-| Requirement | Details |
-|---|---|
-| **Android Studio** | Hedgehog (2023.1.1) or newer recommended |
-| **JDK** | Java 8 (configured in build.gradle — `JavaVersion.VERSION_1_8`) |
-| **Android SDK** | API Level 34 (Android 14). Install via Android Studio → SDK Manager |
-| **Android device or emulator** | Running Android 7.0 (API 24) or higher |
-| **Internet connection** | Required — the app communicates with Firebase in real time |
-| **Google account** | Needed if you set up your own Firebase project |
-
----
-
-### Steps
-
-#### 1. Clone the repository
-
-```bash
-git clone https://github.com/your-repo-link/Project250_HealthLink.git
-cd Project250_HealthLink
-```
-
-#### 2. Open in Android Studio
-
-- Launch Android Studio.
-- Select **File → Open** and navigate to the cloned folder.
-- Wait for Android Studio to index the project.
-
-#### 3. Configure Firebase
-
-> ⚠️ **Important:** The `google-services.json` file included in this repository is linked to the original project's Firebase instance (`healthlink-138de`). If you are setting up your own Firebase project, follow the steps below. If you are just running the existing project as-is, skip to Step 4.
-
-To connect your own Firebase project:
-
-1. Go to [https://console.firebase.google.com](https://console.firebase.google.com) and create a new project.
-2. Add an Android app with package name `com.example.healthlink`.
-3. Download the generated `google-services.json` and place it in the `app/` folder, replacing the existing file.
-4. In the Firebase console, enable **Realtime Database**:
-   - Go to **Build → Realtime Database → Create Database**.
-   - Start in **test mode** for development (or configure rules for production).
-5. Enable **Authentication**:
-   - Go to **Build → Authentication → Sign-in method**.
-   - Enable **Email/Password**.
-
-#### 4. Sync Gradle
-
-- In Android Studio, click **File → Sync Project with Gradle Files**, or click the **Sync Now** banner that appears at the top of the editor.
-- Wait for the sync to complete. This downloads all dependencies listed in `build.gradle.kts`.
-- If you see a `google-services plugin` error, ensure `google-services.json` is present in the `app/` directory.
-
-#### 5. Run the application
-
-- Connect a physical Android device via USB (with **USB Debugging** enabled in Developer Options), or launch an emulator via **Device Manager**.
-- Click the **Run ▶** button in Android Studio, or press `Shift + F10`.
-- Select your device/emulator from the list.
-- The app will build and launch automatically.
+https://drive.google.com/file/d/1qUuNi5_Gxa-CtV0puSpH4qQZu_JOxhs6/view?usp=sharing
 
 ---
 
